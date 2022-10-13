@@ -39,7 +39,7 @@ main {
     overflow: hidden;
 }
 
-header {
+#autoNav {
     padding: 20px 0;
 
     position: fixed;
@@ -47,7 +47,6 @@ header {
 
     width: 100%;
 
-    background-color: #F9FBFC;
 }
 
 #autoNav ul {
@@ -71,9 +70,19 @@ header {
     font-size: 17px;
 }
 
+#autoNav.scroll{
+    background-color: white;
+    border-bottom: #A558D1 solid 0.5px;
+
+}
+
 #autoNav ul li a:hover {
     font-weight: bold;
 }
+
+#autoNav {
+    transition: 200ms;
+  }
 
 #textMain {
     position: relative;
