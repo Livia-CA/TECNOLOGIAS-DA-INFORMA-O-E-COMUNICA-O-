@@ -1,2 +1,2 @@
-# TECNOLOGIAS-DA-INFORMA-O-E-COMUNICA-O-
+# TIC
 Site desenvolvido para a disciplina de Tecnologias da Informação e Comunicação
