@@ -2,28 +2,74 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TIC</title>
 
-    <link rel="stylesheet" href="style/style.css">
+    <link id="linkCSS" rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/app.js"></script>
 </head>
 <body>
     <main id="home">
         <header>
-            <div>
-                <nav id="mobileNav">
-    
-                </nav>
-    
+            <div>  
                 <nav id="autoNav">
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#metaverso">Metaverso</a></li>
-                        <li><a href="#midias-digitais">Mídias Digitais</a></li>
-                        <li><a href="#bioinformatica">Bioinformática</a></li>
-                    </ul>
+              
+                    <div class="menu">
+                        <ul>
+                            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+                            <li><a onclick="closeMenu()" href="#metaverso">Metaverso</a></li>
+                            <li><a onclick="closeMenu()" href="#midiasDigitais">Mídias Digitais</a></li>
+                            <li><a onclick="closeMenu()" href="#bioinformatica">Bioinformática</a></li>
+                        </ul>
+                    </div>
+              
+                      <button
+                        aria-expanded="false"
+                        aria-label="Abrir menu"
+                        onclick="openMenu()"
+                        class="open-menu"
+                      >
+                      <svg
+                       width="40" 
+                       height="40" 
+                       viewBox="0 0 40 40" 
+                       fill="none" 
+                       xmlns="http://www.w3.org/2000/svg"
+                       >
+                        <path d="M10 20H30" 
+                        stroke="#542D6B" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                        <path d="M10 12H30" 
+                        stroke="#542D6B" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                        <path d="M10 28L22 28" 
+                        stroke="#542D6B" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                        </svg>
+                        
+                      </button>
+                      <button
+                        aria-expanded="true"
+                        aria-label="Fechar menu"
+                        onclick="closeMenu()"
+                        class="close-menu"
+                      >
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 10L10 30M10 10L30 30" stroke="#542D6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                      </button>
                 </nav>
+                
             </div>
         </header>
 
@@ -31,7 +77,7 @@
             <div class="center">
                 <h1>Tecnologias da informação e <b>comunicação</b></h1>
                 <div class="img-main">
-                    <img width="350px" src="archives/images/oculos.png">
+                    <img width="350px" src="archives/images/oculos.svg">
                 </div>
             </div>
         </section>
@@ -50,7 +96,7 @@
     
                 <div class="info-member">
                     <p class="name">Pedro Martins</p>
-                    <p class="instagram"><a href="https://www.instagram.com/phsmartins/">@phsmartins</a></p>
+                    <p class="instagram"><a target="_blank" href="https://www.instagram.com/phsmartins/">@phsmartins</a></p>
                 </div>
             </div>
 
@@ -63,7 +109,7 @@
     
                 <div class="info-member">
                     <p class="name">Livia Caetano</p>
-                    <p class="instagram"><a href="https://www.instagram.com/livia___andrade/">@livia___andrade</a></p>
+                    <p class="instagram"><a target="_blank" href="https://www.instagram.com/livia___andrade/">@livia___andrade</a></p>
                 </div>
             </div>
         </div>
@@ -72,16 +118,16 @@
     <section id="about">
         <div class="center">
             <div class="video w50">
-                <video width="520" controls>
-                    <source src="archives/videos/teste.mp4" type="video/mp4">
+                <video width="520" controls poster="archives/images/poster.png">
+                    <source src="archives/videos/videoDeApresentacao.mp4" type="video/mp4">
                     Seu navegador não suporta esse vídeo
                 </video>
             </div>
 
             <div class="text-about w50">
                 <h3>Sobre</h3>
-                <h2>Lorem Impsum</h2>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h2>Trabalho desenvolvido</h2>
+                <p>O respectivo trabalho consiste em um site informativo que foi realizado como forma avaliativa para a disciplina de Tecnologias da Informação e Comunicação, ministrada pela professora Rosenilda Marques da Silva Felipe, do curso de Engenharia de Computação da Universidade Federal da Grande Dourados. O website, com base nos conceitos discutidos em sala de aula, abordará definição, surgimento, bem como outras informações acerca dos temas Metaverso, Mídias Digitais e Bioinformática.</p>
             </div>
         </div>
     </section>
@@ -117,7 +163,7 @@
                     </div>
 
                     <div class="img-metaverso w40">
-                        <img width="350" src="archives/images/android.png">
+                        <img width="350" src="archives/images/android.svg">
                     </div>
                 </div>
             </div>
@@ -135,24 +181,27 @@
             </div>
         </div>
 
-            <div class="metaverso-box4">
+        <div class="metaverso-box4">
+            <div class="center">
                 <h2>Grandes empresas que estão ajudando a construir o metaverso</h2>
                 <div class="box-text-metaverso">
                     <div class="text-metaverso">
-                        <p>A construção do metaverso requer muito tempo e esforço. Uma das melhores coisas sobre o metaverso é que ele não pode ser criado por apenas uma entidade. O metaverso é uma combinação de vários aspectos da vida, trabalho e lazer. Pequenas equipes trabalham em conjunto com grandes empresas globais e qualquer um pode ajudar a construir o metaverso.</p>
+                        <p>A construção do metaverso requer muito tempo e esforço. Uma das melhores coisas sobre o metaverso é que ele não pode ser criado por apenas uma entidade. O metaverso é uma combinação de vários aspectos da vida, trabalho e lazer. Pequenas equipes trabalham em conjunto com grandes empresas globais e qualquer um pode ajudar a construir o metaverso. E algumas dessas empresas são: Google, Meta, Microsoft, Binance e Epic Games.</p>
                     </div>
 
-                    <div class="img-metaverso">
-                        <img width="350" src="archives/images/logo-empresas.png">
+                    <div class="img-metaverso w40">
+                        <img width="350" src="archives/images/empresas.svg">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="metaverso-box5">
+        <div class="metaverso-box5">
+            <div class="center">
                 <h2>Quando vai acontecer?</h2>
                 <div class="box-text-metaverso">
-                    <div class="img-metaverso">
-                        <img width="350" src="archives/images/acontecer.png">
+                    <div class="img-metaverso w40">
+                        <img width="350" src="archives/images/acontecer.svg">
                     </div>
 
                     <div class="text-metaverso">
@@ -164,8 +213,423 @@
                     </div>
                 </div>
             </div>
+
+            <div class="bg-metaverso-box5"></div>
+        </div>
     </section>
 
-    <script src="./app.js"></script>
+    <section id="midiasDigitais">
+        <div class="midias-box1">
+            <div class="center">
+                <h2>Mídias digitais</h2>
+                <h3>O que é?</h3>
+
+                <div class="box-text-midias">
+                    <div class="text-midias w50">
+                        <p>Mídia digital consiste em todo e qualquer conteúdo que tem como base principal o meio digital, ou seja, que depende de um dispositivo eletrônico para sua criação, distribuição, visualização e armazenamento. Inúmeros exemplos de mídia digital podem ser encontrados a qualquer momento na web, incluindo postagens de mídia social, vídeos, imagens, músicas e outros.</p>
+                    </div>
+
+                    <div class="list-midias w50">
+                        <p>Alguns exemplos de onde os frutos da mídia digital podem ser vistos:</p>
+                        <ul>
+                            <li>Comércio eletrônico</li>
+                            <li>Jogos – console, online e móvel</li>
+                            <li>Sites e aplicativos móveis</li>
+                            <li>Mídia social</li>
+                            <li>Vídeo</li>
+                            <li>Realidade virtual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="midias-box2">
+            <div class="center">
+                <div class="midias-flex1">
+                    <div class="midias-beneficios w66">
+                        <h3>Mídias digitais</h3>
+                        <h2>Quais são os benefícios?</h2>
+                        <p>As mídias digitais contam com diversos benefícios que podem ser utilizados como grandes aliados nas estratégias de uma empresa.</p>
+                    </div>
+
+                    <div class="midia-single-box w33">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Desperta Interação Social</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>A mídia digital e a tecnologia possibilitaram que pessoas, empresas e colegas se conectassem facilmente, não importa em que lugar do mundo estejam localizados. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="midias-flex2">
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Aumenta o reconhecimento da marca</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>Através da distribuição da mídia digital nas mídias sociais e em outros lugares na web, é possibilitado ao público-alvo conhecer melhor a marca e seus produtos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Ajuda a Produtividade</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>As informações digitais são mais fáceis de acessar e trabalhar, especialmente de locais diferentes. Assim, As tarefas podem ser executadas com mais rapidez e eficiência.</p>
+                        </div>
+                    </div>
+
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Assertividade</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>A mídia digital, diferentemente da mídia tradicional, é capaz de alcançar os indivíduos que possuem maior potencial de consumir determinados produtos ou serviços.</p>
+                        </div>
+                    </div>
+
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Maior facilidade para mensurar resultados</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>A mídia digital pode ser acompanhada e monitorada mais facilmente, permitindo a agilização na tomada de decisão e na valorização do investimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Melhor custo-benefício em investimentos</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>A mídia digital costuma ter custos inferiores quando comparado com a mídia tradicional, além de possuir um fornecimento mais amplo de informações.</p>
+                        </div>
+                    </div>
+
+                    <div class="midia-single-box">
+                        <div class="title-midia-single-box">
+                            <img width="30" src="archives/images/check.svg">
+                            <p>Suporta Precisão</p>
+                        </div>
+
+                        <div class="text-midia-single-box">
+                            <p>A mídia digital permite ser editada ou atualizada com facilidade e instantaneamente, permitindo uma maior precisão.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-midias"></div>
+        </div>
+
+        <div class="midias-box3">
+            <div class="center">
+                <div class="title-midias-box3">
+                    <h3>Mídias digitais</h3>
+                    <h2>Tipos: Mídia paga, Mídia ganha e Mídia própria</h2>
+                </div>
+
+                <div class="midia-flex">
+                    <div class="text-midia-flex w60">
+                        <h3>Mídia paga</h3>
+
+                        <p>Mídia paga refere-se à mídia digital pela qual se paga para promover produtos ou serviços. Normalmente, a mídia paga visa direcionar o tráfego de volta para a mídia própria. Pode-se pagar por um anúncio online visando melhorar o tráfego do site, aumentar as vendas, gerar lucro e etc.</p>
+
+                        <p>Exemplos de mídia paga:</p>
+
+                        <ul>
+                            <li>Google ads</li>
+                            <li>Tv indoor (aqueles que seus conteúdos e anúncios aparecem em elevadores, padarias, restaurantes cafés);- Facebook Ads</li>
+                            <li>Linkedin Ads</li>
+                            <li>Instagram Ads</li>
+                            <li>Campanhas de links patrocinados em sites, blogs e outros</li>
+                            <li>Campanhas de Remarketing</li>
+                        </ul>
+                    </div>
+
+                    <div class="img-midia-flex w40">
+                        <img width="350" src="archives/images/midiaPaga.svg">
+                    </div>
+                </div>
+
+                <div class="midia-flex">
+                    <div class="img-midia-flex w40">
+                        <img width="350" src="archives/images/midiaPropria.svg">
+                    </div>
+
+                    <div class="text-midia-flex w60">
+                        <h3>Mídia própria</h3>
+
+                        <p>Mídia própria corresponde à mídia que uma determinada marca controla e possui. Aumentar a quantidade de mídia digital que a própria marca desenvolve dá a ela uma maior visibilidade. Essa visibilidade aumenta a autoridade da marca e melhora sua classificação nos mecanismos de pesquisa.</p>
+
+                        <p>Exemplos de mídia própria:</p>
+
+                        <ul>
+                            <li>Blog</li>
+                            <li>Rede social (quando trabalhada de modo orgânico)</li>
+                            <li>Site</li>
+                            <li>Canal no Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="midia-flex">
+                    <div class="text-midia-flex w60">
+                        <h3>Mídia ganha</h3>
+
+                        <p>Mídia ganha refere-se a informações compartilhadas por meio de boca a boca, depoimentos, mídia social ou outro formato. Essencialmente, é a publicidade dos próprios clientes, através da recomendação de um determinado produto nas próprias mídias sociais, por exemplo. Ao contrário da mídia digital própria, não se tem controle sobre o que as pessoas dizem sobre a empresa e seus produtos e serviços.</p>
+
+                        <p>Exemplos de mídia ganha:</p>
+
+                        <ul>
+                            <li>Menções da mídia social</li>
+                            <li>Comentários em posts patrocinados</li>
+                            <li>Compartilhamentos de conteúdos</li>
+                            <li>Backlinks voluntários</li>
+                            <li>Menções em mídias sociais</li>
+                            <li>Resenhas espontâneas</li>
+                        </ul>
+                    </div>
+
+                    <div class="img-midia-flex w40">
+                        <img width="350" src="archives/images/midiaGanha.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bioinformatica">
+        <div class="bio-box1">
+            <div class="center">
+                <h2>Bioinformática</h2>
+                <h3>O que é?</h3>
+
+                <div class="text-bio-box1">
+                    <p>A bioinformática consiste em um campo interdisciplinar que atua através da parceria de disciplinas, como a ciência da computação, matemática, estatística e engenharias, buscando analisar, interpretar e processar dados e informações biológicas, como sequências de DNA e aminoácidos ou anotações sobre essas sequências.</p>
+
+                    <p>A bioinformática, por exemplo, teve um papel crucial no combate ao Covid-19, infecção respiratória aguda causada pelo vírus SARS-CoV-2. A análise por computador tornou possível decifrar a estrutura molecular das proteínas do vírus de uma maneira inédita, permitindo que vacinas eficazes fossem desenvolvidas em tempo recorde para ajudar a impedir a propagação do vírus.</p>
+                </div>
+            </div>
+
+            <div class="bg-bio-box1"></div>
+        </div>
+
+        <div class="bio-box2">
+            <div class="center">
+                <h3>Bioinformática</h3>
+                <h2>Quando surgiu?</h2>
+
+                <div class="text-bio-box2">
+                    <p>A utilização dos primeiros computadores para processar e armazenar dados gerados em centros de pesquisas celulares, em meados de 1960, proporcionou o surgimento da bioinformática. Mas foi com o Projeto de Genoma Humano, com a grande quantidade de informações geradas através dos novos sequenciadores de DNA, que o desenvolvimento da bioinformática foi impulsionada.</p>
+
+                    <p>O desenvolvimento e a expansão da informática se deu com a enorme quantidade de dados biológicos que criou uma demanda para o desenvolvimento de novos programas computa</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bio-box3">
+            <div class="center">
+                <div class="title-bio-box3">
+                    <h3>Bioinformática</h3>
+                    <h2>Conta com profissionais de várias áreas…</h2>
+                </div>
+
+                <div class="box-text-bio-box3">
+                    <div class="text-bio-box3 w60">
+                        <p>Por se tratar de um campo amplo, a bioinformática precisa de uma gama diversificada de pessoas com diversos conjuntos de habilidades: Programadores para escrever os programas de computador que irão analisar todos os dados coletados, administradores de banco de dados para organizar o armazenamento de tudo, cientistas biológicos e estatísticos para analisar os dados e web designers que irão desenvolver os sites e aplicativos que os cientistas podem usar para pesquisar todos esses dados.</p>
+                    </div>
+
+                    <div class="img-bio-box3 w40">
+                        <img width="350" src="archives/images/bio.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bio-box4">
+            <div class="center">
+                <div class="title-bio-box4">
+                    <h3>Bioinformática</h3>
+                    <h2>Aplicações</h2>
+                    <p>A bioinformática é um campo multidisciplinar usado em muitas ciências da vida, possuindo, assim, inúmeras aplicações:</p>
+                </div>
+
+                <div class="flex-box4">
+                    <div class="single-flex-box4">
+                        <h4>Medicina</h4>
+                        <p>Levou a avanços na medicina personalizada, adaptando os tratamentos à genética de cada pessoa.</p>
+                    </div>
+
+                    <div class="single-flex-box4">
+                        <h4>Farmacologia</h4>
+                        <p>Tem desempenhado um papel fundamental na investigação farmacêutica.</p>
+                    </div>
+
+                    <div class="single-flex-box4">
+                        <h4>Genética</h4>
+                        <p>É aplicado à terapia genética,  em doenças causadas por genes individuais que foram afetados ou herdados. </p>
+                    </div>
+
+                    <div class="single-flex-box4">
+                        <h4>Agricultura</h4>
+                        <p>O uso de proteômica, metabolômica e genética permite o desenvolvimento de culturas mais fortes e resistentes.</p>
+                    </div>
+
+                    <div class="single-flex-box4">
+                        <h4>Pecuária</h4>
+                        <p>É usado para sequenciar o genoma de animais, prevenir doenças e dar-lhes mais resistência e qualidade de vida.</p>
+                    </div>
+
+                    <div class="single-flex-box4">
+                        <h4>Lixo</h4>
+                        <p>Permite o sequenciamento de DNA de bactérias e micróbios para identificar e avaliar o uso no tratamento de residuos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-bio-box4"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            <div class="referencias w40">
+                <div class="btnReferencias">
+                    <h2>Referências</h2>
+                    <div>
+                        <button class="active" id="sitesButton">Sites</button>
+                        <button id="abntButton">ABNT</button>
+                    </div>
+                </div>
+
+                <div id="sites">
+                    <a target="_blank" href="https://blog.fortestecnologia.com.br/tecnologia-e-inovacao/o-que-e-metaverso/">O que é metaverso e como ele funciona? | Fortes Tecnologia</a>
+
+                    <a target="_blank" href="https://academy.binance.com/pt/articles/global-companies-building-up-the-metaverse">6 Empresas Globais Que Estão Desenvolvendo o Metaverso | Binance Academy</a>
+
+                    <a target="_blank" href="https://www.linksexperts.com.br/blog/tipos-de-midias-digitais/">3 tipos de mídias digitais (e como usá-las!) | Links Experts</a>
+
+                    <a target="_blank" href="https://thecdm.ca/program/digital-media">What Is Digital Media? | Master of Digital Media Program</a>
+
+                    <a target="_blank" href="https://www.copypress.com/kb/content-marketing/digital-media-definition-and-examples/">Digital Media: Definition and Examples | CopyPress</a>
+
+                    <a target="_blank" href="https://planejadorweb.com.br/midia-digital/">O que é Mídia Digital e como isso ajudar minha empresa | Planejador Web</a>
+
+                    <a target="_blank" href="https://planejadorweb.com.br/midia-digital/">Mídia Digital: Entenda o Que é, os Tipos e Como Usar no Seu Negócio | Neilpatel</a>
+
+                    <a target="_blank" href="https://www.tecmundo.com.br/ciencia/223009-bioinformatica-que-serve-ela-nosso-dia-dia.htm">Bioinformática: o que é, para que serve e como ela está no nosso dia a dia | TecMundo</a>
+
+                    <a target="_blank" href="https://www.yourgenome.org/facts/what-is-bioinformatics-and-how-do-we-use-it/">What is bioinformatics and how do we use it? | Yourgenome</a>
+
+                    <a target="_blank" href="https://www.ufsm.br/pet/sistemas-de-informacao/2020/12/03/o-que-e-a-bioinformatica/#:~:text=A%20bioinform%C3%A1tica%20atua%20em%20parceria">O que é a Bioinformática? | UFSM</a>
+
+                    <a target="_blank" href="https://www.iberdrola.com/innovation/bioinformatics">What is bioinformatics and what is its impact on health? | IBERDROLA</a>
+                </div>
+
+                <div id="abnt">
+                    <p><b>3 tipos de mídias digitais e como fazê-las funcionar juntas</b>. Disponível em: <a target="_blank"
+                        href="https://www.linksexperts.com.br/blog/tipos-de-midias-digitais">https://www.linksexperts.com.br/blog/tipos-de-midias-digitais/</a>.
+                      Acesso em: 8 out. 2022.</p>
+          
+                    <p><b>6 Empresas Globais Que Estão Desenvolvendo o Metaverso</b>. Disponível em: <a target="_blank"
+                        href="https://academy.binance.com/pt/articles/global-companies-building-up-the-metaverse">https://academy.binance.com/pt/articles/global-companies-building-up-the-metaverse</a>.
+                      Acesso em: 10 out, 2022</p>
+          
+                    <p><b>Bioinformática: o que é, para que serve e como ela está no nosso dia a dia</b>. Disponível em: <a
+                        target="_blank"
+                        href="https://www.tecmundo.com.br/ciencia/223009-bioinformatica-que-serve-ela-nosso-dia-dia.htm">https://www.tecmundo.com.br/ciencia/223009-bioinformatica-que-serve-ela-nosso-dia-dia.htm</a>.
+                      Acesso em: 13 out. 2022.</p>
+          
+                    <p>BLACKSHAW, J. <b>What is bioinformatics and how do we use it?</b> Disponível em: <a target="_blank"
+                        href="https://www.yourgenome.org/facts/what-is-bioinformatics-and-how-do-we-use-it">https://www.yourgenome.org/facts/what-is-bioinformatics-and-how-do-we-use-it</a>.
+                      Acesso em: 13 out. 2022.</p>
+          
+                    <p>CAMPBELL, C. <b>What Is Digital Media?</b> Disponível em: <a target="_blank"
+                        href="https://thecdm.ca/program/digital-media">https://thecdm.ca/program/digital-media</a>. Acesso em: 8
+                      out. 2022.</p>
+          
+                    <p><b>Digital Media: Definition and Examples</b>. Disponível em: <a target="_blank"
+                        href="https://www.copypress.com/kb/content-marketing/digital-media-definition-and-examples">https://www.copypress.com/kb/content-marketing/digital-media-definition-and-examples</a>.
+                      Acesso em: 8 out. 2022.</p>
+          
+                    <p>LOPES, A. <b>O que é Mídia Digital e como isso ajudar minha empresa</b>. Disponível em: <a target="_blank"
+                        href="https://planejadorweb.com.br/midia-digital">https://planejadorweb.com.br/midia-digital</a>. Acesso
+                      em: 8 out. 2022.</p>
+          
+                    <p>MORAES, Paula. <b>O que é metaverso e como ele funciona?</b> Disponível em: <a target="_blank"
+                        href="https://blog.fortestecnologia.com.br/tecnologia-e-inovacao/o-que-e-metaverso">https://blog.fortestecnologia.com.br/tecnologia-e-inovacao/o-que-e-metaverso</a>.
+                      Acesso em: 10 out, 2022.</p>
+          
+                    <p>PATEL, N. <b>Mídia Digital: Entenda o Que é, os Tipos e Como Usar no Seu Negócio</b>. Disponível em: <a
+                        target="_blank"
+                        href="https://neilpatel.com/br/blog/midia-digital/">https://neilpatel.com/br/blog/midia-digital/</a>.
+                      Acesso em: 8 out. 2022.</p>
+          
+                    <p>RECH CASSANEGO, S. <b>O que é a Bioinformática?</b> Disponível em: <a target="_blank"
+                        href="https://www.ufsm.br/pet/sistemas-de-informacao/2020/12/03/o-que-e-a-bioinformatica/#:~:text=A%20bioinform%C3%A1tica%20atua%20em%20parceria">https://www.ufsm.br/pet/sistemas-de-informacao/2020/12/03/o-que-e-a-bioinformatica/#:~:text=A%20bioinform%C3%A1tica%20atua%20em%20parceria</a>.
+                      Acesso em: 13 out. 2022.</p>
+          
+                    <p><b>What is bioinformatics and what is its impact on health?</b> Disponível em: <a target="_blank"
+                        href="https://www.iberdrola.com/innovation/bioinformatics">https://www.iberdrola.com/innovation/bioinformatics</a>.
+                      Acesso em: 13 out. 2022.</p>
+                </div>
+            </div>
+
+            <h1>TECNOLOGIAS DA INFORMAÇÃO E <b>COMUNICAÇÃO</b></h1>
+        </div>
+    </footer>
+
+    <div class="dev">
+        <p>Desenvolvido por Lívia Caetano e Pedro Martins</p>
+    </div>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#542D6B" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <div class="switch__container">
+        <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
+        <label id="removeCSSButton" for="switch-shadow"></label>
+    </div>     
 </body>
 </html>

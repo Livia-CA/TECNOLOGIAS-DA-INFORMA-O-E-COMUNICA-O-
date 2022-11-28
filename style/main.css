@@ -1,0 +1,54 @@
+#removeCSSButton {
+    padding: 0;
+}
+
+.switch__container {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+    
+    width: 60px;
+    height: 30px;
+}
+  
+.switch {
+    display: none;
+}
+  
+.switch + label {
+    display: block;
+    cursor: pointer;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+}
+
+.switch--shadow + label:before {
+    left: 0;
+    background-color: #542D6B;
+    border-radius: 60px;
+    transition: background 0.4s;
+}
+
+.switch--shadow + label:after {
+    width: 31px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.switch--shadow:checked + label:before {
+    background-color: #f1f1f1;
+}
+
+.switch--shadow:checked + label:after {
+    transform: translateX(-30px);
+}
