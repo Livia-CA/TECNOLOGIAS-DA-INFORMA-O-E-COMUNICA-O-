@@ -34,7 +34,7 @@ p, li {
 }
 
 .center {
-    max-width: 1180px;
+    max-width: max(1180px, 52%);
     padding: 0 4%;
     margin: 0 auto;
 }
@@ -506,14 +506,19 @@ nav#autoNav .open-menu{
 .midias-box2 .center {
     position: relative;
     z-index: 2;
-}
 
-.midias-flex1, .midias-flex2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+/*.midias-flex1, .midias-flex2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}*/
 
 .midias-beneficios {
     margin-left: 15px;
@@ -1153,7 +1158,7 @@ footer h1 {
         padding: 90px 0;
     }
     
-    .midias-flex1, .midias-flex2 {
+    .midias-box2 .center {
         justify-content: center;
     }
     
